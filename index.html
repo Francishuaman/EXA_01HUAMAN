@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos_tabla.css">
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <ul>
+				<li id="home" onclick="Home()"><a href="#">Home</a></li>
+				<li><a href="#">About</a>
+				</li>
+				<li><a href="#">Features</a></li>
+				<li id="venta" onclick="Venta()"><a href="#">Sales</a></li>
+			</ul>
+        </nav>
+    </header>
+    <main class="cuerpo">
+        <center>
+        <div class="casa" id="casa">
+            <div class="con">
+                <h1 class="titulo">Lorem Ipsum</h1>
+                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vitae totam voluptatum placeat! Tempore, aliquam facilis maiores neque architecto nisi quidem cum obcaecati pariatur recusandae deleniti suscipit, nihil nesciunt. Esse.</p>
+            </div>
+          
+            <img src="images/paisaje1.png" class="img1">
+            <section class="ima">
+                <img src="images/paisaje2.png" class="img2">
+                <img src="images/paisaje3.png" class="img3">
+                <img src="images/paisaje4.png" class="img4">
+            </section>
+        </div>
+        </center>
+        <div class="tablita" id="tablita">
+            <form id="formulario" name="formu">
+                <label for="precio">Producto:</label>
+               <select name="combobox" id="producto" class="combo" onclick="defecto()">
+                   <option value="zero" disabled selected>Seleccionar producto</option>
+                    <option value="Arroz">Arroz</option>
+                    <option value="Papa">Papa</option>
+                    <option value="Azucar">Azucar</option>
+                </select><br><br>
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" class="num" placeholder="Precio" id="precio" readonly><br><br>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" name="cantidad" class="num" placeholder="Ingrese cantidad" id="cantidad" min="1">
+            </form>
+            <div id="botones">
+                <input type="button" class="btn" value="AGREGAR" onclick="añadir()" id="boton">
+            </div>
+            <table id="tabla">
+                <thead class="cabezaT">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoT"></tbody>
+            </table>
+            <div class="monto" id="monto"></div>
+        </div>
+    </main>
+    <script src="js/script_tabla.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
